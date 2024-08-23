@@ -1,0 +1,176 @@
+@font-face {
+    font-family: 'unisans b'; 
+    src: url('/fonts/UniSans-Trial-Bold.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: #050801;
+}
+
+.box {
+    width: 50%;
+    height: 500px;
+    background-image: url(https://static.tildacdn.info/tild3833-3137-4833-b633-663734383631/image.png);
+    background-position: center center;
+    background-size: 100% 100%;
+    margin-top: 25px;
+	margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #dd4b75;
+    box-shadow: 0 0 10px #dd4b75, 0 0 20px #dd4b75, 0 0 30px #dd4b75, 0 0 40px #dd4b75;
+    border-radius: 10px;
+}
+
+.box::before {
+    filter: blur(50px);
+}
+
+.top {
+    height: 80%;
+	width: 100%;
+    border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.txt {
+	color: white;
+	text-shadow: 1px 1px 10px #dd4b75, 1px 1px 10px #dd4b75, 1px 1px 10px #dd4b75, 1px 1px 10px #dd4b75;
+	letter-spacing: 5px;
+	font-size: 50px;
+	font-family: 'unisans b';
+	top: 100px;
+}
+
+.separator {
+    height: 2px;
+    background-color: #dd4b75;
+    box-shadow: 0 0 10px #dd4b75, 0 0 20px #dd4b75, 0 0 30px #dd4b75, 0 0 40px #dd4b75;
+}
+
+.bottom {
+    height: 20%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	position: relative;
+}
+
+a{
+	font-family: 'unisans b';
+	color: white;
+	display: inline-block;
+	font-size: 15px;
+	letter-spacing: 4px;
+	padding: 24px 30px;
+	position: relative;
+	overflow: hidden;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 0.5s;
+}
+
+a:hover{
+	background: #dd4b75;
+	box-shadow: 0 0 10px #dd4b75, 0 0 10px #dd4b75, 0 0 20px #dd4b75, 0 0 30px #dd4b75;
+	color: #050801;
+}
+
+a span{
+	display: block;
+	position: absolute;
+}
+
+a span:nth-child(1){
+	animation: animate1 1s linear infinite;
+	background-color: #dd4b75;
+	height: 2px;
+	left: -100%;
+	top: 0;
+	width: 100%;
+}
+
+@keyframes animate1{
+	0%{left: -100%;}
+	50%, 100%{left: 100%;}
+}
+
+a span:nth-child(2){
+	animation: animate2 1s linear infinite;
+	animation-delay: 0.25s;
+	background-color: #dd4b75;
+	height: 100%;
+	top: -100%;
+	right: 0;
+	width: 2px;
+}
+
+@keyframes animate2{
+	0%{top: -100%;}
+	50%, 100%{top: 100%;}
+}
+
+a span:nth-child(3){
+	animation: animate3 1s linear infinite;
+	animation-delay: 0.5s;
+	background-color: #dd4b75;
+	bottom: 0;
+	height: 2px;
+	right: -100%;
+	width: 100%;
+}
+
+@keyframes animate3{
+	0%{right: -100%;}
+	50%, 100%{right: 100%;}
+}
+
+a span:nth-child(4){
+	animation: animate4 1s linear infinite;
+	animation-delay: 0.75s;
+	background-color: #dd4b75;
+	bottom: -100%;
+	height: 100%;
+	left: 0;
+	width: 2px;
+}
+
+@keyframes animate4{
+	0%{bottom: -100%;}
+	50%, 100%{bottom: 100%;}
+}
+
+.button-container {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+	border: 3px solid #4d194d; /* Добавлено свойство border */
+}
+
+.button:hover {
+    background-color: #dd4b75;
+}
